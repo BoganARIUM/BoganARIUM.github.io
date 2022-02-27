@@ -1,4 +1,8 @@
+let showPlaceholder = true;
+let touches = 0;
+
 const button = document.getElementById("runaway-btn");
+let exitButton = document.getElementById("exit");
 
 const animateMove = (element, prop, pixels) =>
   anime({
@@ -14,20 +18,15 @@ const animateMove = (element, prop, pixels) =>
 
     animateMove(this, "left", left).play();
     animateMove(this, "top", top).play();
+
+    touches++;
+    console.log(touches);
+    if (touches >= 5) {
+      exitButton.style.display = "inline";
+    }
   });
 });
 
 const getRandomNumber = (num) => {
   return Math.floor(Math.random() * (num + 1));
 };
-
-let touches = 0;
-let mainButton = document.getElementById("runaway-btn");
-let exitButton = document.getElementById("exit");
-mainButton.addEventListener("mouseover", (e) => {
-  touches++;
-  console.log(touches);
-  if (touches >= 5) {
-    exitButton.style.display = "inline";
-  }
-});
