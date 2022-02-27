@@ -17,7 +17,7 @@ body {
 }
 
 #main-logo {
-  max-width: 40em;
+  width: clamp(20em, 60em, 100%);
 }
 
 #runaway-btn {
