@@ -6,7 +6,18 @@
 }
 
 body {
-  background-color: rgb(31, 31, 31);
+  width: 100%;
+  background: white;
+}
+
+#hero {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#main-logo {
+  max-width: 40em;
 }
 
 #runaway-btn {
