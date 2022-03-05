@@ -2,7 +2,7 @@ let showPlaceholder = true;
 let touches = 0;
 
 const button = document.getElementById("runaway-btn");
-let exitButton = document.getElementById("exit");
+let errorScreen = document.getElementById("error");
 
 const animateMove = (element, prop, pixels) =>
   anime({
@@ -20,9 +20,9 @@ const animateMove = (element, prop, pixels) =>
     animateMove(this, "top", top).play();
 
     touches++;
-    console.log(touches);
     if (touches >= 5) {
-      exitButton.style.display = "inline";
+      errorScreen.style.zIndex = "10";
+      errorScreen.style.opacity = "1";
     }
   });
 });
