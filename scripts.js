@@ -15,8 +15,8 @@ const animateMove = (element, prop, pixels) =>
     easing: "easeOutCirc",
   });
 
-["mouseover", "click"].forEach(function (el) {
-  runaway.addEventListener(el, function (event) {
+["mouseover", "click"].forEach(function (action) {
+  runaway.addEventListener(action, function (event) {
     const top = getRandomNumber(window.innerHeight - this.offsetHeight);
     const left = getRandomNumber(window.innerWidth - this.offsetWidth);
 
@@ -25,8 +25,7 @@ const animateMove = (element, prop, pixels) =>
 
     touches++;
     if (touches >= 7) {
-      errorScreen.style.zIndex = "2";
-      errorScreen.style.opacity = "1";
+      errorScreen.style.display = "grid";
     }
   });
 });
@@ -38,13 +37,11 @@ const getRandomNumber = (num) => {
 document.addEventListener("keydown", function (event) {
   userInput = userInput.concat(event.key);
   if (userInput === valid) {
-    boganVideo.style.zIndex = "3";
-    boganVideo.style.opacity = "1";
+    boganVideo.style.display = "grid";
     video.play();
     setTimeout(() => {
       userInput = "";
-      boganVideo.style.zIndex = "-2";
-      boganVideo.style.opacity = "0";
+      boganVideo.style.display = "none";
     }, 31000);
   }
 });

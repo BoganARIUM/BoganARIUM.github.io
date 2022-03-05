@@ -48,14 +48,13 @@ body {
 }
 
 #error {
-  z-index: -1;
-  opacity: 0;
+  z-index: 2;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  display: grid;
+  display: none;
   place-items: center;
   background: #f7f7f7;
   color: #646464;
@@ -149,15 +148,14 @@ body {
 }
 
 #bogan-video {
-  z-index: -2;
-  opacity: 0;
+  z-index: 3;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 100;
-  display: grid;
+  display: none;
   place-items: center;
   background: rgba(1, 1, 1, 0.4);
 }
