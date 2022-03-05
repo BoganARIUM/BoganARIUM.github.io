@@ -24,7 +24,7 @@ const animateMove = (element, prop, pixels) =>
     animateMove(this, "top", top).play();
 
     touches++;
-    if (touches >= 5) {
+    if (touches >= 7) {
       errorScreen.style.zIndex = "2";
       errorScreen.style.opacity = "1";
     }
