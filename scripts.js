@@ -10,7 +10,7 @@ const boganVideo = document.getElementById("bogan-video");
 const video = document.getElementById("video");
 
 window.onload = () => {
-  const selectRandomImage = `assets/images/image${Math.floor(Math.random() * 20)}.png`;
+  const selectRandomImage = `assets/images/image${Math.floor(Math.random() * 20 + 1)}.png`;
   mainImage.src = selectRandomImage;
 };
 
