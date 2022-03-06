@@ -50,4 +50,9 @@ document.addEventListener("keydown", function (event) {
       boganVideo.style.display = "none";
     }, 31000);
   }
+  if (event.key === "Escape") {
+    boganVideo.style.display = "none";
+    video.pause();
+    video.currentTime = 0;
+  }
 });
