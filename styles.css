@@ -26,13 +26,14 @@ body {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 4rem;
+  height: 3rem;
   width: 10rem;
   font-size: 1.3em;
   border-radius: 5px;
   border: none;
   box-shadow: 1px 1px 5px black;
-  background-color: white;
+  color: white;
+  background-color: rgb(76, 142, 250);
   cursor: pointer;
 }
 
