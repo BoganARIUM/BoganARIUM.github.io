@@ -4,9 +4,15 @@ let userInput = "";
 let valid = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba";
 
 const runaway = document.getElementById("runaway-btn");
+const mainImage = document.getElementById("main-image");
 const errorScreen = document.getElementById("error");
 const boganVideo = document.getElementById("bogan-video");
 const video = document.getElementById("video");
+
+window.onload = () => {
+  const selectRandomImage = `assets/images/image${Math.floor(Math.random() * 20)}.png`;
+  mainImage.src = selectRandomImage;
+};
 
 ["mouseover", "click"].forEach(function (action) {
   runaway.addEventListener(action, function (event) {
@@ -17,9 +23,7 @@ const video = document.getElementById("video");
     animateMove(this, "top", topDistance).play();
 
     touches++;
-    if (touches >= 7) {
-      errorScreen.style.display = "grid";
-    }
+    if (touches >= 7) errorScreen.style.display = "grid";
   });
 });
 
