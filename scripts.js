@@ -8,20 +8,13 @@ const errorScreen = document.getElementById("error");
 const boganVideo = document.getElementById("bogan-video");
 const video = document.getElementById("video");
 
-const animateMove = (element, prop, pixels) =>
-  anime({
-    targets: element,
-    [prop]: `${pixels}px`,
-    easing: "easeOutCirc",
-  });
-
 ["mouseover", "click"].forEach(function (action) {
   runaway.addEventListener(action, function (event) {
-    const top = getRandomNumber(window.innerHeight - this.offsetHeight);
-    const left = getRandomNumber(window.innerWidth - this.offsetWidth);
+    const topDistance = getRandomNumber(window.innerHeight - this.offsetHeight);
+    const leftDistance = getRandomNumber(window.innerWidth - this.offsetWidth);
 
-    animateMove(this, "left", left).play();
-    animateMove(this, "top", top).play();
+    animateMove(this, "left", leftDistance).play();
+    animateMove(this, "top", topDistance).play();
 
     touches++;
     if (touches >= 7) {
@@ -30,8 +23,17 @@ const animateMove = (element, prop, pixels) =>
   });
 });
 
+const animateMove = (element, prop, pixels) =>
+  anime({
+    targets: element,
+    [prop]: `${pixels}px`,
+    easing: "easeOutCirc",
+  });
+
 const getRandomNumber = (num) => {
-  return Math.floor(Math.random() * (num + 1));
+  const value = Math.floor(Math.random() * (num + 1));
+  //Have a minimum value
+  return value < 300 ? value + 500 : value;
 };
 
 document.addEventListener("keydown", function (event) {
