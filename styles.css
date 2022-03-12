@@ -18,7 +18,7 @@ body {
 }
 
 #main-image {
-  max-width: 700px;
+  width: clamp(250px, 80vw, 750px);
   aspect-ratio: 1;
 }
 
@@ -35,17 +35,6 @@ body {
   box-shadow: 1px 1px 5px black;
   color: white;
   background-color: rgb(76, 142, 250);
-  cursor: pointer;
-}
-
-#exit {
-  display: none;
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  padding: 1em;
-  background-color: transparent;
-  border: none;
   cursor: pointer;
 }
 
