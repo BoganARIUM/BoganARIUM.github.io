@@ -55,7 +55,7 @@ body {
 #error-content {
   font-size: 125%;
   margin-inline: 1em;
-  width: clamp(20em, 60%, 800px);
+  width: clamp(200px, 60%, 800px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 175px 50px auto auto;

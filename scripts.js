@@ -23,7 +23,10 @@ window.onload = () => {
     animateMove(this, "top", topDistance).play();
 
     touches++;
-    if (touches >= 7) errorScreen.style.display = "grid";
+    if (touches >= 7) {
+      errorScreen.style.display = "grid";
+      runaway.style.display = "none";
+    }
   });
 });
 
