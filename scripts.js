@@ -38,9 +38,7 @@ const animateMove = (element, prop, pixels) =>
   });
 
 const getRandomNumber = (num) => {
-  const value = Math.floor(Math.random() * (num + 1));
-  //Have a minimum value
-  return value < 300 ? value + 500 : value;
+  return Math.floor(Math.random() * (num + 1));
 };
 
 document.addEventListener("keydown", function (event) {
