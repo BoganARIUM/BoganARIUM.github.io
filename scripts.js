@@ -1,7 +1,11 @@
 let showPlaceholder = true;
 let touches = 0;
 let userInput = "";
-let valid = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba";
+const codes = {
+  konami: "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba",
+  godMode: "iddqd",
+  blood: "abacabb",
+};
 
 const runaway = document.getElementById("runaway-btn");
 const mainImage = document.getElementById("main-image");
@@ -43,7 +47,8 @@ const getRandomNumber = (num) => {
 
 document.addEventListener("keydown", function (event) {
   userInput = userInput.concat(event.key);
-  if (userInput === valid) {
+
+  if (userInput === codes.konami) {
     boganVideo.style.display = "grid";
     video.play();
     setTimeout(() => {
@@ -51,6 +56,16 @@ document.addEventListener("keydown", function (event) {
       boganVideo.style.display = "none";
     }, 31000);
   }
+
+  if (userInput === codes.godMode) {
+    window.location.replace("https://forms.gle/Zr14JEHyvMSq7Z6EA");
+  }
+
+  if (userInput === codes.blood) {
+    alert("You're wasting all of our time");
+    userInput = "";
+  }
+
   if (event.key === "Escape") {
     boganVideo.style.display = "none";
     video.pause();
