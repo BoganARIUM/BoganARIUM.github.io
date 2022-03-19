@@ -58,11 +58,12 @@ document.addEventListener("keydown", function (event) {
   }
 
   if (userInput === codes.godMode) {
-    window.location.replace("https://forms.gle/Zr14JEHyvMSq7Z6EA");
+    window.open("https://forms.gle/Zr14JEHyvMSq7Z6EA", "_blank", "toolbar=0,location=0,menubar=0");
+    userInput = "";
   }
 
   if (userInput === codes.blood) {
-    alert("You're wasting all of our time");
+    window.open("http://www.ouaismaisbon.ch/", "_blank", "toolbar=0,location=0,menubar=0");
     userInput = "";
   }
 
