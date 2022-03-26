@@ -68,7 +68,7 @@ document.addEventListener("keydown", function (event) {
     }, 12000);
     setTimeout(() => {
       boganButton.remove();
-    }, 14500);
+    }, 13500);
   }
 
   if (userInput === codes.godMode) {
