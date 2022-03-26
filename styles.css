@@ -27,6 +27,9 @@ body {
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.raffleButton {
   height: 3rem;
   width: 10rem;
   font-size: 1.3em;
@@ -137,14 +140,24 @@ body {
   color: black;
 }
 
-#bogan-video {
-  z-index: 3;
+#bogan-button {
   position: absolute;
+  z-index: 6;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  display: grid;
+  place-items: center;
+}
+
+#bogan-video {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: none;
   place-items: center;
   background: rgba(1, 1, 1, 0.8);

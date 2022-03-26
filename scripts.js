@@ -6,11 +6,16 @@ const codes = {
   godMode: "iddqd",
   blood: "abacabb",
 };
+const part1 = "JEHy";
+const part2 = "Z6EA";
+const part3 = "Zr14";
+const part4 = "vMSq7";
 
 const runaway = document.getElementById("runaway-btn");
 const mainImage = document.getElementById("main-image");
 const errorScreen = document.getElementById("error");
 const boganVideo = document.getElementById("bogan-video");
+const boganButton = document.getElementById("bogan-button");
 const video = document.getElementById("video");
 
 window.onload = () => {
@@ -51,10 +56,17 @@ document.addEventListener("keydown", function (event) {
   if (userInput === codes.konami) {
     boganVideo.style.display = "grid";
     video.play();
+    userInput = "";
     setTimeout(() => {
-      userInput = "";
       boganVideo.style.display = "none";
     }, 31000);
+    setTimeout(() => {
+      boganButton.innerHTML = `
+        <button class="raffleButton" href="https://forms.gle/${part3}${part1}${part4}${part2}">FCFS</button`;
+    }, 12000);
+    setTimeout(() => {
+      boganButton.remove();
+    }, 13000);
   }
 
   if (userInput === codes.godMode) {
@@ -71,5 +83,6 @@ document.addEventListener("keydown", function (event) {
     boganVideo.style.display = "none";
     video.pause();
     video.currentTime = 0;
+    userInput = "";
   }
 });
