@@ -62,7 +62,9 @@ document.addEventListener("keydown", function (event) {
     }, 31000);
     setTimeout(() => {
       boganButton.innerHTML = `
-        <button class="raffleButton" href="https://forms.gle/${part3}${part1}${part4}${part2}">FCFS</button`;
+      <a href="https://forms.gle/${part3}${part1}${part4}${part2}">
+        <button class="raffleButton" >FCFS</button
+      </a>`;
     }, 12000);
     setTimeout(() => {
       boganButton.remove();
