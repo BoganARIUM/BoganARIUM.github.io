@@ -6,10 +6,10 @@ const codes = {
   godMode: "iddqd",
   blood: "abacabb",
 };
-const part1 = "JEHy";
-const part2 = "Z6EA";
-const part3 = "Zr14";
-const part4 = "vMSq7";
+const part1 = "Gb7D";
+const part2 = "ppNa9";
+const part3 = "RKBe";
+const part4 = "5qDo";
 
 const runaway = document.getElementById("runaway-btn");
 const mainImage = document.getElementById("main-image");
