@@ -72,7 +72,7 @@ document.addEventListener("keydown", function (event) {
   }
 
   if (userInput === codes.godMode) {
-    window.open("https://forms.gle/Zr14JEHyvMSq7Z6EA", "_blank", "toolbar=0,location=0,menubar=0");
+    window.open("https://forms.gle/spDG32ER6gvVkDNs5", "_blank", "toolbar=0,location=0,menubar=0");
     userInput = "";
   }
 
