@@ -13,10 +13,22 @@ body {
   place-items: center;
 }
 
+#enter {
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.3em;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(76, 142, 250);
+  cursor: pointer;
+}
+
 #bogan-video {
   width: fit-content;
-  display: grid;
+  display: none;
   place-items: center;
   border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
   overflow: hidden;
 }
