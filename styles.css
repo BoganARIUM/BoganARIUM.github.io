@@ -6,159 +6,17 @@
 }
 
 body {
-  position: relative;
   width: 100%;
-  background: white;
-}
-
-#hero {
   height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-#main-image {
-  width: clamp(250px, 80vw, 750px);
-  aspect-ratio: 1;
-}
-
-#runaway-btn {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.raffleButton {
-  height: 3rem;
-  width: 10rem;
-  font-size: 1.3em;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 1px 1px 5px black;
-  color: white;
-  background-color: rgb(76, 142, 250);
-  cursor: pointer;
-}
-
-#error {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: none;
-  place-items: center;
-  background: #f7f7f7;
-  color: #646464;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-}
-
-#error-content {
-  padding: 1em;
-  width: clamp(200px, 100%, 800px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 175px 50px auto auto;
-  grid-template-areas:
-    "dino     dino"
-    "title    title"
-    "subtitle subtitle"
-    "reload   details";
-}
-
-#dinosaur {
-  grid-area: dino;
-}
-
-#error-title {
-  grid-area: title;
-  margin-top: 0;
-  color: #333;
-  font-size: 1.6em;
-  font-weight: normal;
-  line-height: 1.25em;
-  margin-bottom: 16px;
-}
-
-#error-subtitle {
-  grid-area: subtitle;
-  color: #777;
-  display: inline;
-  font-size: 0.86667em;
-  margin-top: 15px;
-  margin-bottom: 60px;
-  opacity: 0.5;
-  text-transform: uppercase;
-}
-
-#error-reload {
-  grid-area: reload;
-  display: flex;
-  justify-content: flex-start;
-}
-
-#reload {
-  background: rgb(76, 142, 250);
-  height: 40px;
-  border: 0;
-  border-radius: 2px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  float: right;
-  font-size: 0.875em;
-  margin: 0;
-  padding: 10px 24px;
-  transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#reload:hover {
-  box-shadow: 2px 2px 3px rgba(1, 1, 1, 0.5);
-}
-
-#error-details {
-  grid-area: details;
-  text-align: right;
-}
-
-#details-link {
-  background: inherit;
-  border: 0;
-  float: none;
-  box-shadow: none;
-  min-width: 0;
-  margin: 0;
-  padding: 10px 0;
-  text-decoration: underline;
-  color: #696969;
-  font-size: 0.875em;
-}
-
-#details-link a {
-  color: black;
-}
-
-#bogan-button {
-  position: absolute;
-  z-index: 6;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  background: white;
   display: grid;
   place-items: center;
 }
 
 #bogan-video {
-  position: absolute;
-  z-index: 5;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: none;
+  width: fit-content;
+  display: grid;
   place-items: center;
-  background: rgba(1, 1, 1, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
 }
